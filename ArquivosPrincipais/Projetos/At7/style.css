@@ -1,0 +1,17 @@
+body{
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#ececec;
+    font-family:Arial;
+}
+
+.relogio{
+    background:#222;
+    color:white;
+    padding:20px 35px;
+    border-radius:8px;
+    font-size:35px;
+}
