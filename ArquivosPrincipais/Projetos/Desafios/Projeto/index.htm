@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Órbita — Central de Eventos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="splash" class="splash">
+    <div class="orbital-logo"><b>e</b></div>
+    <p>carregando agenda</p>
+    <div class="progress">
+      <div class="progress-bar"></div>
+    </div>
+  </div>
+  <div id="loginScreen" class="login-screen d-none">
+    <section class="login-card">
+      <div class="orbital-logo"><b>e</b></div>
+      <p class="eyebrow">ÁREA DO ORGANIZADOR</p>
+      <h1>Olá, vamos começar?</h1>
+      <p>Organize seus eventos de um jeito mais leve.</p>
+      <form id="loginForm" class="mt-4"><label class="form-label">Usuário</label><input class="form-control"
+          id="loginUser" value="Administrador" required><label class="form-label mt-3">Senha</label><input
+          class="form-control" id="loginPass" type="password" value="Senha" required><button
+          class="btn btn-lime w-100 mt-4">Entrar</button><small>Demo: Administrador / Senha</small></form>
+    </section>
+  </div>
+  <div id="appShell" class="d-none">
+    <header class="topbar"><button id="sideToggle" class="icon-btn" title="Alternar navegação">☰</button><a
+        class="brand" href="#dashboard"><span class="brand-mark">e</span><span>encontro<small>agenda de
+            eventos</small></span></a>
+      <div class="top-actions"><button id="themeToggle" class="icon-btn" title="Tema">☼</button>
+        <div class="dropdown"><button class="icon-btn position-relative" data-bs-toggle="dropdown"
+            title="Notificações">●<span id="notifCount" class="notification-dot"></span></button>
+          <ul id="notifList" class="dropdown-menu dropdown-menu-end notification-menu"></ul>
+        </div><button id="logoutBtn" class="avatar" title="Sair">A</button>
+      </div>
+    </header>
+    <aside id="sidebar" class="sidebar">
+      <p class="nav-label">MENU</p>
+      <nav><a href="#dashboard" data-view="dashboard" class="active"><span>⌂</span><b>Visão geral</b></a><a
+          href="#eventos" data-view="eventos"><span>□</span><b>Eventos</b></a><a href="#favoritos"
+          data-view="favoritos"><span>♡</span><b>Favoritos</b></a></nav>
+      <div class="sidebar-bottom">
+        <div class="tip">☼ <span><b>Dica rápida</b><br>Encontre seus eventos usando a busca.</span></div>
+      </div>
+    </aside>
+    <main class="main">
+      <section id="dashboardView" class="view">
+        <div class="hero">
+          <div>
+            <p class="eyebrow">VISÃO GERAL</p>
+            <h1>Eventos, sem<br><em>complicação.</em></h1>
+            <p>O essencial da sua agenda em um só lugar.</p>
+          </div><button class="btn btn-lime btn-orbit" data-action="new-event">Novo evento <span>+</span></button>
+        </div>
+        <div id="metricCards" class="row g-3"></div>
+        <div class="row g-4 mt-1">
+          <div class="col-lg-7">
+            <article class="panel chart-panel">
+              <div class="panel-head">
+                <div>
+                  <p class="eyebrow">RESUMO</p>
+                  <h3>Como está sua agenda</h3>
+                </div><span class="live-pill">ATUALIZADO</span>
+              </div>
+              <div id="cssChart" class="css-chart"></div>
+            </article>
+          </div>
+          <div class="col-lg-5">
+            <article class="panel">
+              <p class="eyebrow">PRÓXIMO EVENTO</p>
+              <div id="nextEvent" class="next-event"></div>
+            </article>
+            <article class="panel mt-4">
+              <p class="eyebrow">ATIVIDADE</p>
+              <div id="dashNotifs" class="feed"></div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section id="eventosView" class="view d-none">
+        <div class="view-head">
+          <div>
+            <p class="eyebrow">GERENCIAMENTO</p>
+            <h1>Meus <em>eventos</em></h1>
+          </div><button class="btn btn-lime" data-action="new-event">+ Criar evento</button>
+        </div>
+        <article class="panel filter-panel">
+          <div class="input-group search-wrap"><span class="input-group-text">⌕</span><input id="searchInput"
+              class="form-control" placeholder="Buscar nome, categoria ou local..."></div>
+          <div class="filter-grid"><select id="categoryFilter" class="form-select">
+              <option value="">Todas as categorias</option>
+            </select><select id="statusFilter" class="form-select">
+              <option value="">Qualquer status</option>
+              <option value="disponivel">Disponível</option>
+              <option value="ultimas">Últimas vagas</option>
+              <option value="lotado">Lotado</option>
+            </select><select id="monthFilter" class="form-select">
+              <option value="">Todos os meses</option>
+            </select><select id="sortSelect" class="form-select">
+              <option value="date">Ordenar: data</option>
+              <option value="name">Ordenar: nome</option>
+              <option value="participants">Ordenar: participantes</option>
+              <option value="capacity">Ordenar: vagas</option>
+            </select></div>
+        </article>
+        <div id="eventGrid" class="event-grid"></div>
+        <nav>
+          <ul id="pagination" class="pagination pagination-sm justify-content-center mt-4"></ul>
+        </nav>
+      </section>
+      <section id="favoritosView" class="view d-none">
+        <div class="view-head">
+          <div>
+            <p class="eyebrow">LISTA SALVA</p>
+            <h1>Meus <em>favoritos</em></h1>
+          </div>
+        </div>
+        <div id="favoritesGrid" class="event-grid"></div>
+      </section>
+    </main>
+    <footer>Sistema de gerenciamento de eventos <span>Dados salvos neste navegador</span></footer>
+  </div>
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileNav">
+    <div class="offcanvas-header"><b>ÓRBITA</b><button class="btn-close" data-bs-dismiss="offcanvas"></button></div>
+    <div class="offcanvas-body">
+      <div id="mobileLinks"></div>
+    </div>
+  </div>
+  <div class="modal fade" id="eventModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <p class="eyebrow mb-1">NOVA COORDENADA</p>
+            <h4 id="eventModalTitle">Criar evento</h4>
+          </div><button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <form id="eventForm" novalidate>
+          <div class="modal-body"><input id="eventId" type="hidden">
+            <div class="row g-3">
+              <div class="col-md-8"><label class="form-label">Nome da experiência</label><input id="eventName"
+                  class="form-control" required></div>
+              <div class="col-md-4"><label class="form-label">Categoria</label><input id="eventCategory"
+                  class="form-control" list="categories" required><datalist id="categories">
+                  <option>Arte</option>
+                  <option>Tecnologia</option>
+                  <option>Música</option>
+                  <option>Gastronomia</option>
+                  <option>Negócios</option>
+                </datalist></div>
+              <div class="col-md-6"><label class="form-label">Local</label><input id="eventLocation"
+                  class="form-control" required></div>
+              <div class="col-md-3"><label class="form-label">Data</label><input id="eventDate" type="date"
+                  class="form-control" required></div>
+              <div class="col-md-3"><label class="form-label">Hora</label><input id="eventTime" type="time"
+                  class="form-control" required></div>
+              <div class="col-md-4"><label class="form-label">Limite de vagas</label><input id="eventCapacity"
+                  type="number" min="1" class="form-control" required></div>
+              <div class="col-md-8"><label class="form-label">Imagem da órbita</label><input id="eventImage" type="file"
+                  accept="image/*" class="form-control"><input id="eventImageData" type="hidden"></div>
+              <div class="col-12"><img id="imagePreview" class="image-preview d-none" alt="Prévia da imagem"></div>
+              <div class="col-12"><label class="form-label">Descrição</label><textarea id="eventDescription"
+                  class="form-control" rows="3" required></textarea></div>
+            </div>
+          </div>
+          <div class="modal-footer"><button type="button" class="btn btn-ghost"
+              data-bs-dismiss="modal">Cancelar</button><button class="btn btn-lime">Salvar coordenada</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="detailModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 id="detailTitle"></h4><button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div id="detailBody" class="modal-body"></div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="participantModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <p class="eyebrow mb-1">LISTA DE EMBARQUE</p>
+            <h4>Adicionar participante</h4>
+          </div><button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <form id="participantForm" novalidate>
+          <div class="modal-body"><input id="participantEventId" type="hidden"><label
+              class="form-label">Nome</label><input id="participantName" class="form-control" required><label
+              class="form-label mt-3">E-mail</label><input id="participantEmail" type="email" class="form-control"
+              required><label class="form-label mt-3">Telefone</label><input id="participantPhone" class="form-control"
+              maxlength="15" required><label class="form-label mt-3">CPF</label><input id="participantCpf"
+              class="form-control" maxlength="14" required></div>
+          <div class="modal-footer"><button class="btn btn-lime">Confirmar embarque</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="confirmModal" tabindex="-1">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center p-4">
+          <div class="danger-orb">!</div>
+          <h4>Desfazer esta órbita?</h4>
+          <p class="text-muted">O evento e seus participantes serão removidos.</p><button id="confirmDelete"
+            class="btn btn-danger w-100">Sim, remover</button><button class="btn btn-ghost w-100 mt-2"
+            data-bs-dismiss="modal">Manter evento</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastBox"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/eventos.js"></script>
+  <script src="js/participantes.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

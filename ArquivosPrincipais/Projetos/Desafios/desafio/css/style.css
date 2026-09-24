@@ -1,0 +1,92 @@
+/* cores do site */
+:root {
+    --preto: #151515;
+    --rosa: #ff77ad;
+    --fundo: #f4f1ea;
+    --caixa: #fff;
+    --texto: #151515;
+    --borda: #bbb;
+    --fraco: #666;
+  }
+  
+  /* jeito normal da pagina */
+  body {
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: Arial, sans-serif;
+  }
+  
+  /* partes escuras */
+  .navbar, .topo, footer { background: var(--preto); color: white; }
+  .topo { padding: 25px; margin-bottom: 20px; }
+  .topo small { color: var(--rosa); }
+  .topo h1 { margin: 8px 0; }
+  .topo p { margin: 0; color: #ccc; }
+  
+  /* caixas da pagina */
+  .card, .product-card, .empty {
+    background: var(--caixa);
+    border: 1px solid var(--borda);
+    border-radius: 4px;
+  }
+  
+  .card h2 { margin-bottom: 20px; }
+  .btn-main { background: var(--rosa); border-color: var(--rosa); color: var(--preto); }
+  .btn-main:hover { background: #ff5c9d; border-color: #ff5c9d; color: var(--preto); }
+  
+  .product-card { padding: 15px; }
+  .product-card h3 { font-size: 20px; margin-top: 15px; }
+  .category { background: var(--rosa); color: var(--preto); padding: 3px 6px; font-size: 12px; }
+  .actions { margin-top: 15px; padding-top: 12px; border-top: 1px solid var(--borda); }
+  
+  .empty { color: var(--fraco); margin-top: 20px; padding: 30px; text-align: center; }
+  footer { margin-top: 50px; }
+  
+  /* cores quando o modo escuro ta ligado */
+  body.dark {
+    --preto: #0d0d0d;
+    --rosa: #ff78b2;
+    --fundo: #1d1d1d;
+    --caixa: #292929;
+    --texto: #f1f1f1;
+    --borda: #555;
+    --fraco: #ccc;
+    --bs-body-bg: #1d1d1d;
+    --bs-body-color: #f1f1f1;
+    --bs-card-bg: #292929;
+    --bs-card-color: #f1f1f1;
+    --bs-secondary-color: #ccc;
+  }
+  
+  /* deixa todos os textos claros no modo escuro */
+  body.dark,
+  body.dark h1,
+  body.dark h2,
+  body.dark h3,
+  body.dark h4,
+  body.dark p,
+  body.dark label,
+  body.dark strong,
+  body.dark .card,
+  body.dark .product-card,
+  body.dark .empty { color: var(--texto); }
+  
+  body.dark .form-control,
+  body.dark .form-select {
+    background: #333;
+    border-color: var(--borda);
+    color: var(--texto);
+  }
+  
+  body.dark .form-control::placeholder { color: #bbb; }
+  body.dark .form-select option { background: #333; color: white; }
+  body.dark .btn-secondary { background: #555; border-color: #555; }
+  body.dark .btn-light { background: #333; border-color: #777; color: white; }
+  body.dark .alert { color: var(--texto); }
+  
+  /* ajeita no celular */
+  @media (max-width: 700px) {
+    .d-flex { flex-wrap: wrap; }
+    .topo h1 { font-size: 30px; }
+  }
+  
