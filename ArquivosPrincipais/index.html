@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <!-- ==========================================================
+         DESENVOLVIMENTO WEB
+         Template Oficial da Disciplina PW
+         Professor: Paulo Carvalho
+         ========================================================== -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tech Solutions | Desenvolvimento Web</title>
+
+    <!-- Bootstrap 5.3 -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS Personalizado -->
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<!--LOADER-->
+
+<div id="loader">
+
+    <div class="spinner-border text-primary"
+         style="width:4rem;height:4rem;"
+         role="status">
+
+    </div>
+
+</div>
+
+    <!-- ======================================================
+                        NAVBAR
+    ======================================================= -->
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+
+            <div class="container">
+
+                <!-- LOGO -->
+
+                <a class="navbar-brand fw-bold" href="#">
+
+                    <i class="bi bi-code-slash"></i>
+
+                    Tech Solutions
+
+                </a>
+
+                <!-- BOTÃO MOBILE -->
+
+                <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menu">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>                <!-- Botão de modo escuro -->
+                <button id="btnDarkMode" class="btn btn-outline-light ms-lg-3" type="button" aria-label="Ativar modo escuro" aria-pressed="false">
+                    <i class="bi bi-sun-fill" aria-hidden="true"></i>
+                </button>
+
+                <!-- MENU -->
+
+                <div class="collapse navbar-collapse" id="menu">
+
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+
+                            <a class="nav-link active" href="#inicio">
+
+                                Início
+
+                            </a>
+
+                        </li>
+
+                        <li class="nav-item">
+
+                            <a class="nav-link" href="#sobre">
+
+                                Sobre
+
+                            </a>
+
+                        </li>
+
+                        <li class="nav-item">
+
+                            <a class="nav-link" href="#servicos">
+
+                                Serviços
+
+                            </a>
+
+                        </li>                        <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- ======================================================
+                        CONTEÚDO PRINCIPAL
+    ======================================================= -->
+
+    <main>
+
+        <!-- ==========================================
+                    HERO SECTION
+        =========================================== -->
+
+        <section id="inicio" class="hero">
+
+            <div class="container">
+
+                <div class="row align-items-center">
+
+                                        <!-- Texto de apresentação -->
+                    <div class="col-lg-7 text-white py-5">
+                        <p class="text-uppercase fw-semibold mb-2">Desenvolvimento Web</p>
+                        <h1 class="display-4 fw-bold">Ideias que viram soluções digitais</h1>
+                        <p class="lead">Criamos experiências digitais modernas, acessíveis e responsivas.</p>
+                        <div class="mt-4">
+                            <a href="#sobre" class="btn btn-primary btn-lg me-3">Saiba mais</a>
+                            <a href="#contato" class="btn btn-outline-light btn-lg">Contato</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 text-center text-white" aria-hidden="true">
+                        <i class="bi bi-code-square hero-icon"></i>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ==========================================
+                    SOBRE
+        =========================================== -->
+
+        <section id="sobre" class="py-5">
+
+            <div class="container">
+
+                <div class="row align-items-center">
+
+                    <div class="col-lg-6">
+
+                        <img
+                            src="img/sobre.svg"
+                            class="img-fluid rounded shadow"
+                            alt="Ilustração sobre a Tech Solutions">
+
+                    </div>
+
+                    <div class="col-lg-6">
+
+                        <h2 class="mb-4">
+
+                            Quem Somos
+
+                        </h2>
+
+                        <p>
+
+                            A Tech Solutions é uma empresa fictícia criada
+                            exclusivamente para fins educacionais.
+
+                        </p>
+
+                        <p>
+
+                            Durante a disciplina cada aluno personalizará
+                            este template transformando-o em seu próprio
+                            projeto.
+
+                        </p>
+
+                        <ul class="list-group">
+
+                            <li class="list-group-item">
+
+                                ✔ HTML5
+
+                            </li>
+
+                            <li class="list-group-item">
+
+                                ✔ CSS3
+
+                            </li>
+
+                            <li class="list-group-item">
+
+                                ✔ Bootstrap
+
+                            </li>
+
+                            <li class="list-group-item">
+
+                                ✔ JavaScript
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ==========================================
+                    SERVIÇOS
+        =========================================== -->
+
+        <section id="servicos" class="py-5 bg-light">
+
+            <div class="container">
+
+                <div class="text-center mb-5">
+
+                    <h2>
+
+                        Nossos Serviços
+
+                    </h2>
+
+                    <p>
+
+                        Exemplos de Cards utilizando Bootstrap.
+
+                    </p>
+
+                </div>
+
+                <div class="row">
+
+                    <!-- CARD 1 -->
+
+                    <div class="col-md-4">
+
+                        <div class="card shadow h-100">
+
+                            <div class="card-body text-center">
+
+                                <i class="fa-solid fa-laptop-code fa-4x text-primary mb-3"></i>
+
+                                <h4>
+
+                                    Desenvolvimento Web
+
+                                </h4>
+
+                                <p>
+
+                                    HTML5, CSS3, Bootstrap
+                                    e JavaScript.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- CARD 2 -->
+
+                    <div class="col-md-4">
+
+                        <div class="card shadow h-100">
+
+                            <div class="card-body text-center">
+
+                                <i class="fa-solid fa-mobile-screen fa-4x text-success mb-3"></i>
+
+                                <h4>
+
+                                    Responsividade
+
+                                </h4>
+
+                                <p>
+
+                                    Layout adaptado para celulares,
+                                    tablets e computadores.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- CARD 3 -->
+
+                    <div class="col-md-4">
+
+                        <div class="card shadow h-100">
+
+                            <div class="card-body text-center">
+
+                                <i class="fa-solid fa-server fa-4x text-danger mb-3"></i>
+
+                                <h4>
+
+                                    Hospedagem
+
+                                </h4>
+
+                                <p>
+
+                                    Publicação utilizando
+                                    GitHub Pages.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+		<!-- ===================================================================================== -->
+    <!-- ======================================================
+                        ESTATÍSTICAS
+    ======================================================= -->
+
+    <section class="py-5 bg-primary text-white">
+
+        <div class="container">
+
+            <div class="row text-center">
+
+                <div class="col-md-3">
+
+                    <i class="fa-solid fa-user-graduate fa-3x mb-3"></i>
+
+                    <h2 class="counter" data-target="500">0</h2>
+
+                    <p>Alunos Formados</p>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <i class="fa-solid fa-code fa-3x mb-3"></i>
+
+                    <h2 class="counter" data-target="150">0</h2>
+
+                    <p>Projetos Desenvolvidos</p>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <i class="fa-solid fa-award fa-3x mb-3"></i>
+
+                    <h2 class="counter" data-target="10">0</h2>
+
+                    <p>Anos de Experiência</p>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <i class="fa-solid fa-laptop fa-3x mb-3"></i>
+
+                    <h2 class="counter" data-target="100">0</h2>
+
+                    <p>Projetos Responsivos</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ======================================================
+                        PORTFÓLIO
+    ======================================================= -->
+
+    <section id="galeria" class="py-5">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h2 class="fw-bold">
+
+                    Nosso Portfólio
+
+                </h2>
+
+                <p class="text-muted">
+
+                    Exemplos de projetos desenvolvidos.
+
+                </p>
+
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="card shadow border-0">
+
+                        <img src="img/projeto1.svg"
+                             class="card-img-top"
+                             alt="Imagem ilustrativa de projeto">
+
+                        <div class="card-body">
+
+                            <h4>Landing Page</h4>
+
+                            <p>
+
+                                Projeto utilizando HTML,
+                                CSS e Bootstrap.
+
+                            </p>
+
+                            <a href="#" class="btn btn-primary">
+
+                                Visualizar
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="card shadow border-0">
+
+                        <img src="img/projeto2.svg"
+                             class="card-img-top"
+                             alt="Imagem ilustrativa de projeto">
+
+                        <div class="card-body">
+
+                            <h4>Loja Virtual</h4>
+
+                            <p>
+
+                                Interface moderna
+                                totalmente responsiva.
+
+                            </p>
+
+                            <a href="#" class="btn btn-success">
+
+                                Visualizar
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="card shadow border-0">
+
+                        <img src="img/projeto3.svg"
+                             class="card-img-top"
+                             alt="Imagem ilustrativa de projeto">
+
+                        <div class="card-body">
+
+                            <h4>Sistema Web</h4>
+
+                            <p>
+
+                                Dashboard desenvolvido
+                                com Bootstrap.
+
+                            </p>
+
+                            <a href="#" class="btn btn-danger">
+
+                                Visualizar
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ======================================================
+                        DIFERENCIAIS
+    ======================================================= -->
+
+    <section class="py-5 bg-light">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h2>
+
+                    Por que escolher nossa empresa?
+
+                </h2>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <div class="d-flex mb-4">
+
+                        <i class="fa-solid fa-check text-success fa-2x me-3"></i>
+
+                        <div>
+
+                            <h4>Qualidade</h4>
+
+                            <p>
+
+                                Código organizado seguindo
+                                boas práticas.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="d-flex mb-4">
+
+                        <i class="fa-solid fa-shield text-primary fa-2x me-3"></i>
+
+                        <div>
+
+                            <h4>Segurança</h4>
+
+                            <p>
+
+                                Desenvolvimento seguindo
+                                padrões modernos.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="d-flex mb-4">
+
+                        <i class="fa-solid fa-clock text-warning fa-2x me-3"></i>
+
+                        <div>
+
+                            <h4>Rapidez</h4>
+
+                            <p>
+
+                                Projetos entregues dentro
+                                do prazo.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="d-flex mb-4">
+
+                        <i class="fa-solid fa-headset text-danger fa-2x me-3"></i>
+
+                        <div>
+
+                            <h4>Suporte</h4>
+
+                            <p>
+
+                                Atendimento completo
+                                ao cliente.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ======================================================
+                        DEPOIMENTOS
+    ======================================================= -->
+
+    <section class="py-5">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h2>
+
+                    O que nossos clientes dizem
+
+                </h2>
+
+            </div>
+
+            <div id="carouselExample"
+                 class="carousel slide">
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+
+                        <div class="text-center">
+
+                            <img src="img/cliente1.svg"
+                                 class="rounded-circle shadow mb-3"
+                                 width="120" height="120" alt="Foto ilustrativa do cliente">
+
+                            <h4>João Silva</h4>
+
+                            <p class="lead">
+
+                                "Excelente atendimento e
+                                excelente qualidade."
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="carousel-item">
+
+                        <div class="text-center">
+
+                            <img src="img/cliente2.svg"
+                                 class="rounded-circle shadow mb-3"
+                                 width="120" height="120" alt="Foto ilustrativa do cliente">
+
+                            <h4>Maria Souza</h4>
+
+                            <p class="lead">
+
+                                "Equipe extremamente
+                                profissional."
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="carousel-item">
+
+                        <div class="text-center">
+
+                            <img src="img/cliente3.svg"
+                                 class="rounded-circle shadow mb-3"
+                                 width="120" height="120" alt="Foto ilustrativa do cliente">
+
+                            <h4>Carlos Oliveira</h4>
+
+                            <p class="lead">
+
+                                "Recomendo a todos."
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#carouselExample"
+                        data-bs-slide="prev">
+
+                    <span class="carousel-control-prev-icon"></span>
+
+                </button>
+
+                <button class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#carouselExample"
+                        data-bs-slide="next">
+
+                    <span class="carousel-control-next-icon"></span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+        <!-- ======================================================
+                            FAQ
+        ======================================================= -->
+
+        <section class="py-5 bg-light">
+
+            <div class="container">
+
+                <div class="text-center mb-5">
+
+                    <h2 class="fw-bold">
+                        Perguntas Frequentes
+                    </h2>
+
+                    <p class="text-muted">
+                        Exemplo de Accordion utilizando Bootstrap.
+                    </p>
+
+                </div>
+
+                <div class="accordion" id="faq">
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button" type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#pergunta1">
+
+                                O que é HTML?
+
+                            </button>
+
+                        </h2>
+
+                        <div id="pergunta1"
+                            class="accordion-collapse collapse show"
+                            data-bs-parent="#faq">
+
+                            <div class="accordion-body">
+
+                                HTML é a linguagem responsável pela estrutura
+                                de uma página Web.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button collapsed" type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#pergunta2">
+
+                                O que é CSS?
+
+                            </button>
+
+                        </h2>
+
+                        <div id="pergunta2"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#faq">
+
+                            <div class="accordion-body">
+
+                                CSS é utilizado para estilizar uma página.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button collapsed" type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#pergunta3">
+
+                                O que é Bootstrap?
+
+                            </button>
+
+                        </h2>
+
+                        <div id="pergunta3"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#faq">
+
+                            <div class="accordion-body">
+
+                                Bootstrap é um framework CSS utilizado
+                                para criar layouts responsivos.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================================
+                            CONTATO
+        ======================================================= -->
+
+        <section id="contato" class="py-5">
+
+            <div class="container">
+
+                <div class="text-center mb-5">
+
+                    <h2 class="fw-bold">
+
+                        Entre em Contato
+
+                    </h2>
+
+                    <p>
+
+                        Preencha o formulário abaixo.
+
+                    </p>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-6">
+
+                        <form id="formContato">
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
+
+                                    Nome
+
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="nome"
+                                    name="nome"
+                                    class="form-control"
+                                    placeholder="Digite seu nome"
+                                    required>
+
+                            </div>
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
+
+                                    Email
+
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    class="form-control"
+                                    placeholder="Digite seu e-mail"
+                                    required>
+
+                            </div>
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
+
+                                    Assunto
+
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="assunto"
+                                    name="assunto"
+                                    class="form-control"
+                                    required>
+
+                            </div>
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
+
+                                    Mensagem
+
+                                </label>
+
+                                <textarea
+                                    id="mensagem"
+                                    name="mensagem"
+                                    rows="6"
+                                    class="form-control"
+                                    required>
+
+                                </textarea>
+
+                            </div>
+
+                            <button
+                                class="btn btn-primary btn-lg">
+
+                                Enviar Mensagem
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                    <div class="col-lg-6">
+
+                        <iframe
+                            class="rounded shadow w-100"
+                            height="500"
+                            loading="lazy"
+                            src="https://maps.google.com/maps?q=Ji-Paraná&t=&z=13&ie=UTF8&iwloc=&output=embed">
+
+                        </iframe>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================================
+                            NEWSLETTER
+        ======================================================= -->
+
+        <section class="py-5 bg-primary text-white">
+
+            <div class="container text-center">
+
+                <h2>
+
+                    Receba nossas novidades
+
+                </h2>
+
+                <p>
+
+                    Inscreva-se gratuitamente.
+
+                </p>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-lg-6">
+
+                        <div class="input-group">
+
+                            <input
+                                type="email"
+                                class="form-control"
+                                placeholder="Digite seu e-mail">
+
+                            <button
+                                class="btn btn-dark">
+
+                                Inscrever
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ======================================================
+                        RODAPÉ
+    ======================================================= -->
+
+    <footer class="bg-dark text-white pt-5">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-4">
+
+                    <h4>
+
+                        Tech Solutions
+
+                    </h4>
+
+                    <p>
+
+                        Template criado para a disciplina
+                        Desenvolvimento Web.
+
+                    </p>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <h4>
+
+                        Links
+
+                    </h4>
+
+                    <ul class="list-unstyled">
+
+                        <li>
+
+                            <a href="#inicio"
+                                class="text-white text-decoration-none">
+
+                                Início
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#sobre"
+                                class="text-white text-decoration-none">
+
+                                Sobre
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#servicos"
+                                class="text-white text-decoration-none">
+
+                                Serviços
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#contato"
+                                class="text-white text-decoration-none">
+
+                                Contato
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <h4>
+
+                        Redes Sociais
+
+                    </h4>
+
+                    <a href="#" class="text-white fs-3 me-3">
+
+                        <i class="bi bi-facebook"></i>
+
+                    </a>
+
+                    <a href="#" class="text-white fs-3 me-3">
+
+                        <i class="bi bi-instagram"></i>
+
+                    </a>
+
+                    <a href="#" class="text-white fs-3 me-3">
+
+                        <i class="bi bi-linkedin"></i>
+
+                    </a>
+
+                    <a href="#" class="text-white fs-3">
+
+                        <i class="bi bi-github"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="text-center pb-3">
+
+                © 2026 Tech Solutions
+
+                <br>
+
+                Template Oficial da Disciplina de Desenvolvimento Web
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ======================================================
+                        BOTÃO VOLTAR AO TOPO
+    ======================================================= -->
+
+    <button
+        id="btnTopo"
+        class="btn btn-primary rounded-circle"
+        type="button"
+        aria-label="Voltar ao topo">
+
+        <i class="bi bi-arrow-up"></i>
+
+    </button>
+
+
+    <!-- Bootstrap -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript -->
+
+    <script src="script.js" defer></script>
+
+</body>
+
+</html>
+
+
