@@ -12,13 +12,23 @@ O formulário valida os campos e usa `mailto:` para abrir o aplicativo de e-mail
 
 ## Projetos apresentados
 
-Os três cards mantêm os exemplos previstos no template, agora descritos como trabalhos de estudo; as imagens são ilustrações genéricas e não capturas de aplicações reais.
+O portfólio apresenta os dez projetos (`At1` a `At10`) e três desafios. Os cards usam ícones com proporções iguais; cada botão abre o respectivo HTML na mesma guia.
 
-- **Landing page:** estrutura de apresentação com seções e chamada para ação. Tecnologias indicadas: HTML, CSS e Bootstrap.
-- **Loja virtual:** proposta de interface responsiva para catálogo e navegação de produtos. Tecnologias indicadas: HTML, CSS e Bootstrap.
-- **Sistema e calculadora:** exercício de interface para organizar informações e realizar cálculos no navegador. Tecnologias indicadas: HTML, CSS e JavaScript.
+- **At1 — Apresentação pessoal:** apresentação e hobbies (HTML e CSS).
+- **At2 — Cadastro:** formulário com dados pessoais e contato (HTML e CSS).
+- **At3 — Calculadora:** operações com dois valores (HTML, CSS e JavaScript).
+- **At4 — Lista de tarefas:** inclusão de tarefas em uma lista (HTML, CSS e JavaScript).
+- **At5 — Página responsiva:** layout adaptável a diferentes telas (HTML e CSS).
+- **At6 — Galeria:** coleção de imagens com visualização ampliada (HTML, CSS e JavaScript).
+- **At7 — Relógio:** exibição dinâmica do horário (HTML, CSS e JavaScript).
+- **At8 — Quiz:** perguntas interativas e resultado (HTML, CSS e JavaScript).
+- **At9 — Consulta de CEP:** consulta de localização por API (HTML, CSS, JavaScript e API externa).
+- **At10 — Controle de notas:** cadastro de alunos e notas (HTML, CSS e JavaScript).
+- **Desafio At6 — Galeria interativa:** versão de desafio da galeria (HTML, CSS e JavaScript).
+- **Desafio 1 — Cadastro de produtos:** cadastro, pesquisa e listagem de produtos (HTML, CSS, Bootstrap e JavaScript).
+- **Desafio 2 — Órbita:** central para agenda, eventos e favoritos (HTML, CSS, Bootstrap e JavaScript).
 
-Os endereços publicados de cada projeto não constam no repositório. Os botões oferecem contato por e-mail para solicitar mais informações; substituir por URLs reais quando estiverem disponíveis.
+Os links apontam para os arquivos locais dos projetos no repositório; não há endereços de publicação externa cadastrados.
 
 ## Páginas e seções
 
@@ -43,15 +53,15 @@ Trabalho-Web/
     ├── index.html
     ├── style.css
     ├── script.js
-    └── img/
-        ├── FotoPerfil.jpeg
-        ├── sobre.svg
-        ├── projeto1.svg
-        ├── projeto2.svg
-        ├── projeto3.svg
-        ├── cliente1.svg
-        ├── cliente2.svg
-        └── cliente3.svg
+    ├── img/
+    │   ├── FotoPerfil.jpeg
+    │   ├── sobre.svg
+    │   ├── cliente1.svg
+    │   ├── cliente2.svg
+    │   └── cliente3.svg
+    └── Projetos/
+        ├── At1/ a At10/
+        └── Desafios/ (At6, desafio1, Desafio2)
 ```
 
 Os SVGs de cliente e a ilustração `sobre.svg` permanecem no projeto, mas não são exibidos na versão atual. O site carrega Bootstrap e ícones de CDNs, portanto esses recursos dependem de conexão com a internet.
@@ -65,6 +75,6 @@ Este aviso descreve o funcionamento técnico implementado e não substitui uma r
 ## Observações de desenvolvimento
 
 - A fotografia profissional fornecida está em `ArquivosPrincipais/img/FotoPerfil.jpeg` e aparece na apresentação e na seção Quem sou.
-- Os links internos mantêm o usuário na mesma página/guia. Links de projeto ainda dependem dos endereços públicos reais.
+- Os links internos mantêm o usuário na mesma página/guia; os cards abrem projetos locais por caminhos relativos.
 - O template original foi adaptado para remover conteúdo fictício de empresa, estatísticas sem fonte, depoimentos de exemplo e mapa irrelevante.
 - Para publicar, hospedar a pasta `ArquivosPrincipais` em uma hospedagem estática, mantendo juntos o HTML, CSS, JavaScript e a pasta `img`.
